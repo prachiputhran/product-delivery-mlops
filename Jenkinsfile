@@ -22,8 +22,8 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                bat 'pytest || echo No tests found'
+    steps   {
+        bat 'pytest || echo "No tests found, skipping"'
             }
         }
     }
